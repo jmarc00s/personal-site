@@ -1,18 +1,23 @@
-import './globals.css'
+import { ReactNode } from 'react';
+import './globals.css';
+import Head from './head';
+import { Menu } from '@/components/Menu';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+      <Head />
+
+      <body className="bg-base-300 min-h-screen">
+        <main className="container border-base-100 border-l border-r mx-auto bg-base-100 px-16 min-h-screen py-6">
+          <Menu />
+          {children}
+        </main>
+      </body>
     </html>
-  )
+  );
 }
