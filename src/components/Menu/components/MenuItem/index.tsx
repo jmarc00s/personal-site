@@ -6,7 +6,10 @@ type MenuItemProps = MenuItemType;
 
 export const MenuItem = ({ title, href }: MenuItemProps) => {
   return (
-    <li className="font-semibold text-sm hover:text-teal-500" title={title}>
+    <li
+      className="font-semibold text-sm transition hover:text-teal-500 px-3 py-2"
+      title={title}
+    >
       <Link href={href}>{title}</Link>
     </li>
   );

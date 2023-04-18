@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <Head />
 
       <body className="bg-base-300 min-h-screen">
-        <main className="container border-base-100 border-l border-r mx-auto bg-base-100 px-16 min-h-screen py-6">
+        <main className="container max-w-7xl border-base-100 border-l border-r mx-auto bg-base-100 px-16 min-h-screen py-6">
           <Menu />
           {children}
         </main>
