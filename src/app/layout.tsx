@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import './globals.css';
 import Head from './head';
 import { Menu } from '@/components/Menu';
+import { Footer } from '@/components/Footer';
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -9,14 +10,14 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-base-300">
       <Head />
-
-      <body className="bg-base-300 min-h-screen">
-        <main className="container max-w-7xl border-base-100 border-l border-r mx-auto bg-base-100 px-16 min-h-screen py-6">
+      <body className="min-h-screen container max-w-7xl mx-auto">
+        <main className="border-base-100 border-l border-r bg-base-100 px-16 py-6 min-h-full">
           <Menu />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
