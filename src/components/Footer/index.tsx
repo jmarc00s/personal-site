@@ -2,6 +2,7 @@ import { MENUS } from '@/constants';
 import Link from 'next/link';
 import React from 'react';
 import { MenuItem } from '../Menu/components/MenuItem';
+import { SocialMedia } from '../SocialMedia';
 
 export const Footer = () => {
   return (
@@ -17,6 +18,7 @@ export const Footer = () => {
       <p className="text-sm text-center">
         © 2023 João Marcos. All rights reserved.
       </p>
+      <SocialMedia />
     </footer>
   );
 };
