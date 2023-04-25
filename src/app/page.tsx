@@ -1,6 +1,10 @@
-import { BaseText } from '@/components/BaseText';
-import { PageHeader } from '@/components/PageHeader';
-import { SocialMedia } from '@/components/SocialMedia';
+import {
+  BaseText,
+  PageHeader,
+  SocialMedia,
+  WorkExperience,
+} from '@/components';
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -22,6 +26,7 @@ export default function Home() {
         bring the best experiences for users.
       </BaseText>
       <SocialMedia />
+      <WorkExperience />
     </section>
   );
 }
