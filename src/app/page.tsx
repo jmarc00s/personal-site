@@ -4,13 +4,16 @@ import {
   SocialMedia,
   WorkExperience,
 } from '@/components';
+import { RecentProjects } from '@/components/RecentProjects';
+import { getRepos } from '@/services/github';
 
 import Image from 'next/image';
 
 export default async function Home() {
+  const repos = await getRepos();
   return (
-    <section className="max-w-2xl flex flex-col gap-8 mt-16">
-      <div className="flex flex-col gap-6">
+    <section className="flex flex-col gap-8 mt-16">
+      <div className="flex flex-col gap-6 max-w-2xl">
         <Image
           className="rounded-full h-16 w-16 object-cover bg-base-100"
           alt="avatar"
@@ -30,7 +33,10 @@ export default async function Home() {
         </BaseText>
         <SocialMedia />
       </div>
-      <WorkExperience />
+      <div className="flex flex-col md:flex-row gap-16 w-full">
+        <WorkExperience />
+        <RecentProjects repos={repos} />
+      </div>
     </section>
   );
 }
