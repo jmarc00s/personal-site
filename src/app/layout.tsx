@@ -14,7 +14,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <Head />
       <body className="min-h-screen container max-w-7xl mx-auto">
         <main className="border-base-100 border-l border-r bg-base-100 px-16 py-6 min-h-full">
-          <Menu />
           {children}
         </main>
         <Footer />
