@@ -1,5 +1,6 @@
 import React from 'react';
 import { WorkExperience } from '../../types';
+import { OfficeIcon } from '@/components/icons';
 
 type WorkExperienceItemProps = {
   workExperience: WorkExperience;
@@ -13,10 +14,12 @@ export const WorkExperienceItem = ({
   const isCurrentJob = !endYear;
 
   return (
-    <li className="flex flex-col items-start justify-between md:flex-row md:items-center py-2 border-b border-base-300">
+    <li className="flex flex-col items-start justify-between md:flex-row md:items-center py-3 border-b border-base-100">
       <div className="flex gap-3">
         <div className="ring-2 ring-base-200 bg-base-200 flex w-10 h-10 items-center justify-center rounded-full">
-          <span className="rounded-full w-8 h-8 bg-base-300"></span>
+          <span className="rounded-full w-8 h-8 bg-base-300 flex items-center justify-center">
+            <OfficeIcon />
+          </span>
         </div>
         <div className="flex-1">
           <p className="font-semibold">{name}</p>

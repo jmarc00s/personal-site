@@ -7,7 +7,7 @@ import { BorderedSection } from '../BorderedSection';
 export const WorkExperience = () => {
   return (
     <BorderedSection icon={<WorkIcon />} title="Work experiences">
-      <ul className="flex flex-col mb-8">
+      <ul className="flex flex-col">
         {WORK_EXPERIENCES.map((workExperience, index) => (
           <WorkExperienceItem key={index} workExperience={workExperience} />
         ))}

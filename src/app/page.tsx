@@ -1,9 +1,11 @@
 import {
   BaseText,
+  Education,
   PageHeader,
   SocialMedia,
   WorkExperience,
 } from '@/components';
+
 import { RecentProjects } from '@/components/RecentProjects';
 import { getRepos } from '@/services/github';
 
@@ -34,7 +36,10 @@ export default async function Home() {
         <SocialMedia />
       </div>
       <div className="flex flex-col lg:flex-row gap-16 w-full">
-        <WorkExperience />
+        <div className="flex flex-col gap-3 w-full">
+          <WorkExperience />
+          <Education />
+        </div>
         <RecentProjects repos={repos} />
       </div>
     </section>
