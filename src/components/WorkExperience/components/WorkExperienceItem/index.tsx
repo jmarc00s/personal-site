@@ -13,21 +13,25 @@ export const WorkExperienceItem = ({
   const isCurrentJob = !endYear;
 
   return (
-    <li className="flex mb-3 gap-3 items-center">
-      <div className="ring-2 ring-base-200 bg-base-200 flex w-10 h-10 items-center justify-center rounded-full">
-        <span className="rounded-full w-8 h-8 bg-base-300"></span>
+    <li className=" mb-3 flex flex-col items-start justify-between md:flex-row md:items-center">
+      <div className="flex gap-3">
+        <div className="ring-2 ring-base-200 bg-base-200 flex w-10 h-10 items-center justify-center rounded-full">
+          <span className="rounded-full w-8 h-8 bg-base-300"></span>
+        </div>
+        <div className="flex-1">
+          <p className="font-semibold">{name}</p>
+          <span className="text-sm">{role}</span>
+        </div>
       </div>
-      <div className="flex-1">
-        <p className="font-semibold">{name}</p>
-        <span className="text-sm">{role}</span>
+      <div className="hidden md:block">
+        {isCurrentJob ? (
+          <p className="text-sm">Current job</p>
+        ) : (
+          <p className="text-sm">
+            {startYear} - {endYear}
+          </p>
+        )}
       </div>
-      {isCurrentJob ? (
-        <p className="text-sm">Current job</p>
-      ) : (
-        <p className="text-sm">
-          {startYear} - {endYear}
-        </p>
-      )}
     </li>
   );
 };

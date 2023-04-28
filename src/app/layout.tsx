@@ -9,7 +9,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="bg-base-300" data-theme="black">
+    <html lang="en" className="bg-base-300">
       <Head />
       <body className="container max-w-7xl mx-auto">
         <main className="border-base-100 border-l border-r bg-base-100 px-16 py-8 h-full">

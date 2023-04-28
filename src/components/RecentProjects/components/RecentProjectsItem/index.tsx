@@ -18,7 +18,7 @@ export const RecentProjectItem = ({
           <p className="text-md font-semibold">{name}</p>
           <span className="text-sm ">{description}</span>
         </div>
-        <div className="flex gap-3">
+        <div className="gap-3 hidden md:flex">
           {topicsToShow?.map((topic) => (
             <span key={topic} className="badge">
               {topic}

@@ -5,7 +5,7 @@ import { WorkIcon } from '../icons';
 
 export const WorkExperience = () => {
   return (
-    <section className="w-full border rounded-lg border-base-300 px-6 py-4 max-h-72">
+    <section className="w-full border rounded-lg border-base-300 px-6 py-4 shadow-sm">
       <div className="flex gap-4 items-center mb-8">
         <WorkIcon />
         <p className="font-bold text-sm">Work experiences</p>
