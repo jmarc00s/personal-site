@@ -1,9 +1,9 @@
 import React from 'react';
-import { GithubIcon, LinkedinIcon } from '../icons';
+import { EmailIcon, GithubIcon, LinkedinIcon } from '../icons';
 
 export const SocialMedia = () => {
   return (
-    <ul className="flex gap-6">
+    <ul className="flex items-center gap-6">
       <li>
         <a
           title="Linkedin"
@@ -16,6 +16,11 @@ export const SocialMedia = () => {
       <li>
         <a href="https://github.com/jmarc00s" target="_blank" title="Github">
           <GithubIcon />
+        </a>
+      </li>
+      <li>
+        <a href="mailto:jmarcossferreira@gmail.com" title="Mail">
+          <EmailIcon />
         </a>
       </li>
     </ul>
