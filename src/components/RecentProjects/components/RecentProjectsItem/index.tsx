@@ -13,7 +13,7 @@ export const RecentProjectItem = ({
 
   return (
     <a href={url} title="Click to see more" target="_blank">
-      <li className="flex flex-col mb-3 hover:bg-base-300 transition rounded-lg px-4 py-2">
+      <li className="flex flex-col mb-3 bg-base-200  hover:bg-base-300 transition rounded-lg p-4 shadow-md">
         <div className="mb-2">
           <p className="text-md font-semibold">{name}</p>
           <span className="text-sm ">{description}</span>
