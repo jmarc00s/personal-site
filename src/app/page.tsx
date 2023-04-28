@@ -12,7 +12,7 @@ import Image from 'next/image';
 export default async function Home() {
   const repos = await getRepos();
   return (
-    <section className="flex flex-col gap-8 mt-16">
+    <section className="flex flex-col gap-8 rounded-lg">
       <div className="flex flex-col gap-6 max-w-2xl">
         <Image
           className="rounded-full h-16 w-16 object-cover bg-base-100"
