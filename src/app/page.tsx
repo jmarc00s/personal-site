@@ -35,7 +35,7 @@ export default async function Home() {
         </BaseText>
         <SocialMedia />
       </div>
-      <div className="flex flex-col lg:flex-row gap-16 w-full">
+      <div className="flex flex-col gap-3 lg:flex-row lg:gap-16 w-full">
         <div className="flex flex-col gap-3 w-full">
           <WorkExperience />
           <Education />
