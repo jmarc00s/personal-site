@@ -10,7 +10,10 @@ export const PageHeader = ({
   className,
   ...rest
 }: PageHeaderProps) => (
-  <h1 className={classNames('text-4xl font-bold tracking-tight', className)}>
+  <h1
+    {...rest}
+    className={classNames('text-4xl font-bold tracking-tight', className)}
+  >
     {children}
   </h1>
 );
