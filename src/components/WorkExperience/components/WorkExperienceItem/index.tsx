@@ -13,6 +13,8 @@ export const WorkExperienceItem = ({
 
   const isCurrentJob = !endYear;
 
+  const endYearDescription = isCurrentJob ? 'Present' : endYear;
+
   return (
     <li className="flex flex-col items-start justify-between md:flex-row md:items-center py-3 border-b border-base-100">
       <div className="flex gap-3">
@@ -27,13 +29,9 @@ export const WorkExperienceItem = ({
         </div>
       </div>
       <div className="hidden md:block">
-        {isCurrentJob ? (
-          <p className="text-sm">Current job</p>
-        ) : (
-          <p className="text-sm">
-            {startYear} - {endYear}
-          </p>
-        )}
+        <p className="text-sm">
+          {startYear} - {endYearDescription}
+        </p>
       </div>
     </li>
   );
