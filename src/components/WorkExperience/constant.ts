@@ -4,7 +4,7 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
   {
     name: 'Invillia',
     startYear: 2022,
-    role: 'Senior Frontend Engineer',
+    role: 'Frontend Engineer',
   },
 
   {
